@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H1>List currency</H1>
+<table>
+    <tr>
+        <th width="120">Currency name</th>
+        <th width="120">Sell</th>
+        <th width="160">buy</th>
+        <th width="160">day</th>
+    </tr>
+    <div th:each="list:${currency}">
+        <tr>
+
+            <td th:text="${list.getCurrency_name()}"></td>
+            <td th:text="${list.getSell()}"></td>
+            <td th:text="${list.getBuy()}"></td>
+            <td th:text="${list.getDay()}"></td>
+        </tr>
+    </div>
+</table>
+</body>
+</html>
